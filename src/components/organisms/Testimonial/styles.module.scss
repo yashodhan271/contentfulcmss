@@ -1,0 +1,126 @@
+@import '../../../styles/mixins';
+@import '../../../styles/colours.scss';
+@import '../../../styles/breakpoints.scss';
+
+.testimonial {
+  padding: 40px 0;
+  
+
+  @media (min-width:$bp-tablet) {
+    @include blockStyling;
+
+  }
+
+  &.animation {
+    @include animation($slideUpAnimation);
+  }
+
+  .testimonialContainer {
+    padding: 40px 0 0 24px;
+
+    @media (min-width:$bp-tablet) {
+
+      padding: 78px 0 0 64px;
+      border-radius: 24px;
+    }
+
+    @media (min-width:$bp-max-content-width) {
+      display: flex;
+      justify-content: space-between;
+      border-radius: 24px;
+      padding: 68px 0 0 64px;
+      margin: 0 auto;
+    }
+  }
+
+  .logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    @media (min-width:$bp-max-content-width) {
+      margin-left: 72px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 137px;
+      height: fit-content;
+
+
+      @media (min-width:$bp-tablet) {
+        max-width: 202px;
+        border-radius: 24px;
+      }
+
+      @media (min-width:$bp-max-content-width) {
+        max-width: 395px;
+
+      }
+    }
+  }
+
+  .mark {
+    width: 100%;
+    max-width: 129px;
+    height: fit-content;
+    margin-bottom: 25px;
+
+    @media (min-width:$bp-tablet) {
+      max-width: 395px;
+    }
+  }
+
+  .testimonialWrapper {
+    margin-right: 62px;
+
+    @media (min-width:$bp-tablet) {
+      margin: 0 95px 64px 0;
+    }
+
+    @media (min-width:$bp-max-content-width) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin: 0 0 96px 0;
+      max-width: 696px;
+    }
+  }
+
+  .mark {
+    margin-bottom: 25px;
+
+    @media (min-width:$bp-tablet) {
+      height: 18px;
+    }
+  }
+
+  .quote {
+    @include h6;
+    color: $dark-grey;
+    font-weight: 600;
+    margin-bottom: 25px;
+
+    @media (min-width:$bp-tablet) {
+      @include h3;
+      line-height: 44px;
+      margin-bottom: 19px;
+
+    }
+
+    @media (min-width:$bp-max-content-width) {
+      width: 696px;
+      margin: 157px 0 28px 0 ;
+    }
+  }
+
+  .author {
+    @include bodySmall;
+    color: $body-text-grey;
+    max-width: 256px;
+
+    @media (min-width: $bp-tablet) {
+      max-width: 100%;
+    }
+  }
+}

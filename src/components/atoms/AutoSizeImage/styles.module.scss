@@ -1,0 +1,10 @@
+@import "@/styles/mixins.scss";
+
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  img {
+    border-radius: 16px;
+  }
+}

@@ -1,0 +1,155 @@
+@import "../../../../styles/mixins.scss";
+@import "../../../../styles/colours";
+@import "../../../../styles/breakpoints";
+
+
+.textColumns {
+  @include maxContentWidth;
+  padding: 40px 24px;
+
+  @media (min-width: $bp-tablet) {
+    padding: 40px 64px;
+  }
+
+  @media (min-width: $bp-max-header-width) {
+    padding: 56px 0;
+  }
+
+  .title {
+    @include h5;
+    margin-bottom: 32px;
+
+    @media (min-width:$bp-desktop) {
+      @include h2;
+      margin-bottom: 80px;
+    }
+
+  }
+
+  .columns {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &.threeColumns,
+    &.fourColumns {
+      @media (min-width: $bp-tablet) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 80px;
+      }
+
+    }
+
+    &.twoColumns {
+      @media (min-width: $bp-tablet) {
+        flex-direction: row;
+        gap: 80px;
+      }
+    }
+
+  }
+
+  .column {
+    max-width: 305px;
+    display: flex;
+    flex-direction: column;
+
+    &.threeColumns {
+      @media (min-width: $bp-tablet) {
+        max-width: 336px;
+        flex-basis: 33.33%;
+      }
+    }
+
+    &.twoColumns {
+      @media (min-width: $bp-tablet) {
+        max-width: 100%;
+        flex-basis: 50%;
+      }
+
+    }
+
+    &.fourColumns {
+      max-width: 100%;
+      flex-basis: 46%;
+    }
+
+  }
+
+
+  .columnTitle {
+    @include h6;
+    font-weight: 500;
+    margin-bottom: 8px;
+
+    @media (min-width:$bp-desktop) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .textContainer {
+    p {
+      @include body;
+      font-weight: 300;
+    }
+  }
+
+  .columnsButton {
+    margin-top: 48px;
+
+    button {
+      @media (min-width:$bp-small-phone) {
+        min-width: 278px;
+      }
+
+      @media (min-width:$bp-large-phone) {
+        min-width: fit-content;
+      }
+    }
+  }
+
+  .columnLink {
+    padding-top: 32px;
+    margin-top: auto;
+  }
+
+  &.ColumnNumber {
+
+    .title {
+      max-width: 230px;
+
+      @media (min-width:$bp-desktop) {
+        max-width: 458px;
+      }
+    }
+
+    .number {
+      font-size: 52px;
+      font-weight: 600;
+      margin-bottom: 9px;
+
+      @media (min-width:$bp-desktop) {
+        font-size: 88px;
+        margin-bottom: 24px;
+
+      }
+    }
+  }
+
+  &.ColumnIcon,
+  &.Column {
+    .title {
+      @media (min-width:$bp-desktop) {
+        max-width: 814px;
+      }
+    }
+
+    .icon {
+      margin-bottom: 16px;
+    }
+  }
+  .numberHidden {
+    opacity: 0;
+  }
+}

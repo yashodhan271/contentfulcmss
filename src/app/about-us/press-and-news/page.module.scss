@@ -1,0 +1,19 @@
+@import '../../../styles/mixins';
+@import '../../../styles/colours';
+@import '../../../styles/breakpoints';
+
+
+.pressAndNews {
+  @include maxContentWidth;
+  max-width: $bp-max-content-width;
+  padding: 0 24px;
+
+  @media (min-width: $bp-desktop) {
+    padding: 56px 24px;
+  }
+
+  @media (min-width:$bp-max-header-width) {
+    padding: 0;
+  }
+
+}

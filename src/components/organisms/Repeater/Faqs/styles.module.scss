@@ -1,0 +1,61 @@
+@import "../../../../styles/mixins.scss";
+@import "../../../../styles/colours";
+@import "../../../../styles/breakpoints";
+
+.faqs {
+  @include blockStyling;
+
+  @media (min-width:$bp-desktop) {
+    overflow: auto;
+  }
+
+  .title {
+    margin-bottom: 16px;
+
+    @media (min-width:$bp-desktop) {
+      @include h3;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $bp-max-header-width) {
+      max-width: 334px;
+    }
+
+  }
+
+  .accordionContainer {
+    @media (min-width:$bp-desktop) {
+      margin-top: 16px;
+      max-width: 717px;
+      float: right;
+    }
+
+    @media (min-width: $bp-max-header-width) {
+      min-width: 817px;
+    }
+
+  }
+
+  .tertiaryBtn {
+    margin-top: 32px;
+  }
+
+  .textContainer {
+    max-width: 600px;
+
+  }
+
+  .faqsButton {
+    button {
+      min-width: 278px;
+      align-items: center;
+      margin-top: 32px;
+
+      @media (min-width:$bp-desktop) {
+        min-width: fit-content;
+        margin-top: 64px;
+      }
+    }
+
+  }
+}

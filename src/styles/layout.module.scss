@@ -1,0 +1,8 @@
+@import "@/styles/breakpoints.scss";
+@import "@/styles/mixins.scss";
+
+.siteWrapper {
+  position: relative;
+  margin: 0 auto;
+  //max-width: $bp-max-site-width;
+}

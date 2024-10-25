@@ -1,0 +1,42 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .pageCopy {
+    padding: 0 16px;
+  }
+
+  .arrow {
+    background-repeat: no-repeat;
+    background-size: 40px;
+    width: 40px;
+    height: 40px;
+
+    &.left {
+      background-image: url('../../../../public/icons/pagination-inactive.svg');
+      pointer-events: none;
+
+      &.active {
+        background-image: url('../../../../public/icons/pagination-active.svg');
+        transform: rotate(180deg);
+        cursor: pointer;
+        pointer-events: all;
+      }
+    }
+
+    &.right {
+      background-image: url('../../../../public/icons/pagination-inactive.svg');
+      transform: rotate(180deg);
+      pointer-events: none;
+
+      &.active {
+        background-image: url('../../../../public/icons/pagination-active.svg');
+        transform: none;
+        cursor: pointer;
+        pointer-events: all;
+      }
+    }
+
+  }
+}

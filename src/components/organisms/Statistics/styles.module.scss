@@ -1,0 +1,96 @@
+@import "../../../styles/mixins";
+@import "../../../styles/colours";
+@import "../../../styles/breakpoints";
+
+.statistics {
+  @include maxContentWidth;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $bp-desktop) {
+    flex-direction: row;
+    padding: 40px 40px;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  @media (min-width: $bp-max-header-width) {
+    padding: 56px 0;
+  }
+
+  .text {
+    margin: 0 62px 50px 0;
+
+    @media (min-width: $bp-large-phone) {
+      margin-bottom: 50px;
+      max-width: 100%;
+    }
+
+    @media (min-width: $bp-tablet) {
+      max-width: 457px;
+      padding-top: 48px;
+    }
+
+    p {
+      @include h6;
+
+      @media (min-width:$bp-desktop) {
+        @include h4;
+      }
+
+    }
+  }
+
+  .statisticsWrapper {
+    background-color: $coherent-bg-grey;
+    border-radius: 24px;
+    padding: 38px 24px 42px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &.animation {
+      @include animation($slideUpAnimation);
+    }
+
+    @media (min-width: $bp-tablet) {
+      padding: 138px 48px 56px 48px;
+    }
+
+    @media (min-width: $bp-desktop) {
+      width: 457px;
+      gap: 64px;
+    }
+  }
+
+  .statisticsFullwidth {
+    width: 100%;
+    max-width: 100%;
+
+    .descriptiveText {
+      max-width: 700px;
+    }
+  }
+
+  .tagline {
+    @include bodySmall;
+    margin-bottom: 20px;
+
+    @media (min-width: $bp-desktop) {
+      margin-bottom: -16px;
+    }
+  }
+
+  .statistic {
+    @include h2;
+    color: $dark-grey;
+    font-weight: 600;
+    margin-bottom: 16px;
+    overflow-wrap: break-word;
+  }
+
+  .descriptiveText {
+    margin-top: 20px;
+  }
+}

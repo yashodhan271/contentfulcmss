@@ -1,0 +1,180 @@
+@import 'breakpoints';
+@import 'colours';
+
+
+@mixin h1 {
+  font-size: 44px;
+  font-size: 4.4rem;
+  line-height: 56px;
+  letter-spacing: -1px;
+  color: $text;
+}
+
+@mixin h2 {
+  font-size: 40px;
+  font-size: 4rem;
+  line-height: 48px;
+  letter-spacing: -2%;
+  color: $text;
+}
+
+@mixin h3 {
+  font-size: 32px;
+  font-size: 3.2rem;
+  line-height: 38px;
+  letter-spacing: -2%;
+  color: $text;
+}
+
+@mixin h4 {
+  font-size: 28px;
+  font-size: 2.4rem;
+  line-height: 34px;
+  letter-spacing: -2%;
+  color: $text;
+}
+
+@mixin h5 {
+  font-size: 22px;
+  font-size: 2.2rem;
+  line-height: 32px;
+  font-weight: 600;
+  letter-spacing: -.5px;
+  color: $text;
+}
+
+@mixin h6 {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 24px;
+  letter-spacing: -2%;
+  color: $text;
+}
+
+@mixin body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 26px;
+  font-weight: 400;
+  color: $text;
+}
+
+@mixin bodySmall {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 22px;
+  line-height: 2.2rem;
+  font-weight: 400;
+}
+
+@mixin maxContentWidth {
+  margin: auto;
+  max-width: $bp-max-content-width;
+}
+
+@mixin blockStyling {
+  @include maxContentWidth;
+  padding: 40px 24px;
+
+  @media (min-width:$bp-desktop){
+    padding: 56px 24px;
+  }
+
+  @media (min-width:$bp-max-header-width) {
+    padding: 56px 0;
+  }
+}
+
+@mixin formCheckbox {
+  vertical-align: middle;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid $cloud;
+  border-radius: 3px;
+
+  &:checked {
+    background-image: url('../../public/icons/list-check.svg');
+  }
+}
+
+@mixin input {
+  border: 1px solid $form-field-borders;
+  border-radius: 16px;
+  padding: 2px 24px;
+  height: 80px;
+}
+
+$slideUpAnimation: slideUp;
+
+@keyframes #{$slideUpAnimation} {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@mixin animation ($block-motion) {
+  animation: $block-motion 1s ease-out forwards;
+}
+
+@mixin listStyle {
+  ul {
+    list-style-type: none;
+
+    li {
+      position: relative;
+      padding-left: 24px;
+
+
+      @media (min-width:$bp-desktop) {
+        margin-bottom: 8px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: url('../../public/icons/tick-coherent.svg') no-repeat;
+        background-size: contain;
+        left: 0;
+        top: 13px;
+        transform: translateY(-50%);
+      }
+    }
+
+  }
+}
+
+@mixin imageTile($right, $top) {
+  width: 100%;
+  height: 100%;
+  max-width: 66px;
+  max-height: 88px;
+  position: absolute;
+  right: $right;
+  top: $top;
+
+  @media (min-width:$bp-small-phone) {
+    max-width: 82px;
+    max-height: 96px;
+  }
+
+  .image {
+    border-radius: 4px;
+    width: 99% !important;
+  }
+}

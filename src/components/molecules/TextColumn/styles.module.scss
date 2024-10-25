@@ -1,0 +1,133 @@
+@import "../../../styles/mixins";
+@import "../../../styles/colours";
+@import "../../../styles/breakpoints";
+
+.textColumn {
+  @include maxContentWidth;
+  padding: 40px 24px;
+
+  @media (min-width: $bp-desktop) {
+    padding: 56px 40px;
+  }
+
+  @media (min-width: $bp-max-content-width) {
+    padding: 56px 0;
+  }
+
+  &.pressRelease {
+    .textWrapper {
+      max-width: 100%;
+    }
+  }
+
+  &.textAndImage {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .title {
+    @include h5;
+    font-size: 22px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+
+    @media (min-width: $bp-desktop) {
+      @include h2;
+      margin-bottom: 46px;
+      max-width: 814px;
+    }
+  }
+
+  .textWrapper {
+    margin-bottom: 48px;
+    max-width: 695px;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 16px;
+
+    @media (min-width: $bp-desktop) {
+      margin-bottom: 46px;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      position: relative;
+      padding-left: 24px;
+
+      @media (min-width: $bp-desktop) {
+        margin-bottom: 8px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: url("../../../../public/tick-coherent.svg") no-repeat;
+        background-size: contain;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    p {
+      @include body;
+      font-weight: 400;
+      margin: 0;
+      color: $body-text-grey;
+    }
+  }
+
+  ol {
+    padding-left: 17px;
+
+    li {
+      position: relative;
+      padding-left: 0;
+
+      @media (min-width: $bp-desktop) {
+        margin-bottom: 8px;
+      }
+    }
+    p {
+      @include body;
+      font-weight: 400;
+      margin: 0;
+      color: $body-text-grey;
+    }
+  }
+  p {
+    @include body;
+    font-weight: 400;
+    margin: 0;
+    color: $body-text-grey;
+  }
+
+  .buttonWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (min-width: $bp-tablet) {
+      flex-direction: row;
+    }
+  }
+
+  button {
+    padding: 10px 40px;
+    &.secondary {
+      padding: 10px 40px;
+      @media (min-width: $bp-desktop) {
+        padding: 14px 24px;
+      }
+    }
+  }
+}

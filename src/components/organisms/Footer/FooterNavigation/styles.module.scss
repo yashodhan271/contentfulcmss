@@ -1,0 +1,10 @@
+@import "@/styles/breakpoints.scss";
+
+.footerNav {
+  display: flex;
+  padding: 48px 0 40px;
+
+  @media (min-width: $bp-desktop) {
+    padding: 96px 0 56px 0;
+  }
+}

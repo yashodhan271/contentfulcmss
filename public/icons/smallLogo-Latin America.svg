@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="31.999998"
+   height="31.999998"
+   viewBox="0 0 31.999998 31.999998"
+   version="1.1"
+   id="svg17"
+   sodipodi:docname="LACO.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs17" />
+  <sodipodi:namedview
+     id="namedview17"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="15.194245"
+     inkscape:cx="31.294744"
+     inkscape:cy="13.557765"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="1920"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg17" />
+  <title
+     id="title1">LACO</title>
+  <g
+     id="All"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd"
+     transform="matrix(0.11428571,0,0,0.11428571,-0.01243434,-0.01243433)">
+    <g
+       id="Artboard"
+       transform="translate(-2130,-3845)">
+      <g
+         id="LACO"
+         transform="translate(2130.1088,3845.1088)">
+        <circle
+           id="LACO-White-Background"
+           fill="#ffffff"
+           cx="140"
+           cy="140"
+           r="137" />
+        <path
+           d="M 47.967269,233.09858 C 140.98428,318.90224 255.74783,233.3312 200.19145,214.49316 151.05769,197.8329 128.53839,222.27004 83.176031,173.79052 0.53495902,85.470601 -8.478618,181.02999 47.967269,233.09858 Z M 250.79883,225.55785 C 298.0563,164.36301 286.76006,76.44695 225.56448,29.194602 164.36891,-18.057746 76.458634,-6.7548055 29.201167,54.440037 -18.0563,115.63716 -6.7600577,203.55321 54.435516,250.80556 115.63109,298.05791 203.56414,286.75497 250.79883,225.55785 Z"
+           id="LACO-Symbol"
+           fill="#0ebe82"
+           transform="rotate(180,140,140)" />
+        <g
+           id="LACO-Text"
+           transform="translate(370.308,26.028)"
+           fill="#000000"
+           fill-rule="nonzero" />
+      </g>
+    </g>
+  </g>
+  <metadata
+     id="metadata17">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>LACO</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

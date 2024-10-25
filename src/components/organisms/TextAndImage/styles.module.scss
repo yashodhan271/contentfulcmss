@@ -1,0 +1,92 @@
+@import '../../../styles/mixins';
+@import '../../../styles/colours.scss';
+@import '../../../styles/breakpoints.scss';
+
+
+.tickBenefits{
+  background-color: $coherent-bg-grey;
+  margin: 40px 0;
+  @media (min-width:$bp-desktop) {
+    margin: 56px 0;
+  }
+}
+.textAndImage {
+  @include blockStyling;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width:$bp-desktop) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .imageWrapper {
+    max-width: 293px;
+    position: relative;
+
+    @media (min-width:$bp-large-phone) {
+      max-width: 100%;
+    }
+
+    @media (min-width:$bp-desktop) {
+      width: 50%;
+      text-align: end;
+    }
+
+  }
+
+  .captionImage {
+    position: absolute;
+    width: 100%;
+    right: 0;
+
+    p {
+      text-align: left;
+      color: $body-text-grey;
+      @include bodySmall;
+    }
+
+  }
+
+  .contentColumn {
+    margin-top: 48px;
+
+    @media (min-width:$bp-desktop) {
+      max-width: 479px;
+    }
+  }
+
+}
+
+.contentColLeft {
+  @media (min-width:$bp-desktop) {
+    padding-right: 40px;
+  }
+  @media (min-width:$bp-max-content-width) {
+    padding-right: 0px;
+  }
+}
+.contentColRight {
+  @media (min-width:$bp-desktop) {
+    padding-left: 40px;
+  }
+  @media (min-width:$bp-max-content-width) {
+    padding-left: 0px;
+  }
+}
+
+.imageOnLeft {
+  @media (min-width:$bp-desktop) {
+    flex-direction: row;
+  }
+  .imageWrapper {
+    @media (min-width:$bp-desktop) {
+      width: 50%;
+      text-align: left;
+    }
+  }
+  .captionImage{
+    max-width: 100% !important;
+  }
+}

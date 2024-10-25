@@ -1,0 +1,138 @@
+@import "../../../../styles/mixins.scss";
+@import "../../../../styles/colours";
+@import "../../../../styles/breakpoints";
+
+
+.carousel {
+  margin: 0 auto;
+  padding: 40px 0 40px 24px;
+
+  @media (min-width: $bp-tablet) {
+    padding: 40px 0 64px 40px;
+  }
+
+  @media (min-width: $bp-max-header-width) {
+    padding: 56px 0 56px calc((100% - 1173px) / 2);
+  }
+
+  &.Sales,
+  &.General {
+    background-color: $coherent-bg-grey;
+    padding: 0;
+    margin: 40px 0;
+
+    @media (min-width: $bp-max-header-width) {
+      margin: 56px 0;
+    }
+
+    &.whiteBg{
+      background-color: $white;
+    }
+
+    .container {
+      padding: 40px 0 40px 24px;
+
+
+      @media (min-width: $bp-tablet) {
+        padding: 40px 0 64px 40px;
+      }
+
+      @media (min-width: $bp-max-header-width) {
+        padding: 56px 0 56px calc((100% - 1173px) / 2);
+      }
+    }
+
+    .title {
+      margin-bottom: 0;
+    }
+
+    .buttonsContainer {
+      margin-top: 0;
+    }
+
+    .overlay {
+      display: none;
+    }
+  }
+
+  .pips {
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
+
+  .title {
+    @include h5;
+    margin-bottom: 32px;
+
+    @media (min-width:$bp-desktop) {
+      @include h3;
+      margin-bottom: 48px;
+    }
+  }
+
+  .overlay {
+    @media (min-width:$bp-tablet) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      opacity: 0.7;
+      z-index: 2;
+      border-radius: 24px;
+    }
+    @media (min-width: 1990px) {
+      position: static; 
+      top: auto;
+      left: auto;
+      width: auto;
+      height: auto;
+      background-color: transparent; 
+      opacity: 1;
+      z-index: auto;
+      border-radius: 0; 
+    }
+  }
+
+  .buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: $bp-max-content-width;
+    margin: 56px 39px 0 0;
+
+    @media (min-width:$bp-max-content-width) {
+      margin: 56px 0 0 0;
+    }
+  }
+
+  .carouselBtn {
+    background-color: $dark-grey;
+    border-radius: 50%;
+    margin-right: 8px;
+    width: 4px;
+    height: 4px;
+    transition: transform .4s ease-in-out;
+    cursor: pointer;
+
+    &.active {
+      transform: scale(2);
+    }
+
+  }
+
+  .arrows {
+    .prev {
+      margin-right: 10px;
+      transform: rotate(180deg);
+      cursor: pointer;
+    }
+
+    .next {
+      cursor: pointer;
+    }
+  }
+}

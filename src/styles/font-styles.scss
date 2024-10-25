@@ -1,0 +1,39 @@
+@import "breakpoints";
+@import "mixins";
+
+h1 {
+  @include h3;
+
+  @media (min-width: $bp-desktop) {
+    @include h1;
+  }
+}
+
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
+}
+
+h4 {
+  @include h5;
+
+  @media (min-width: $bp-desktop) {
+    @include h4;
+  }
+}
+
+h5 {
+  @include h5;
+}
+
+h6 {
+  @include h6;
+}
+
+p,
+a {
+  @include body;
+}

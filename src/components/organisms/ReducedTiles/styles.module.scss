@@ -1,0 +1,74 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/colours.scss';
+@import '../../../styles/mixins.scss';
+
+.reducedTiles {
+  display: grid;
+  padding: 56px 0;
+  row-gap: 24px;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $bp-desktop) {
+    gap: 48px 40px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tile {
+    background-color: $white;
+    box-shadow: $drop-shadow;
+    border-radius: 24px;
+    padding: 24px;
+    height: 220px;
+    position: relative;
+
+
+    @media (min-width: $bp-small-phone){
+      height: 196px;
+    }
+
+    @media (min-width: $bp-desktop) {
+      padding: 32px;
+    }
+
+    &:hover {
+      .title {
+        text-decoration: underline;
+      }
+    }
+
+    .type {
+      @include bodySmall;
+      color: $tag-grey;
+      padding-bottom: 8px;
+    }
+
+    .title {
+      @include body;
+      letter-spacing: 0;
+      padding-bottom: 16px;
+
+      @media (min-width: $bp-max-content-width) {
+        @include h5;
+      }
+    }
+
+    .bottomLabel {
+      @include bodySmall;
+      color: $tag-grey;
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+
+      @media (min-width: $bp-desktop) {
+        left: 32px;
+        bottom: 32px;
+      }
+    }
+
+    .icon {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+    }
+  }
+}

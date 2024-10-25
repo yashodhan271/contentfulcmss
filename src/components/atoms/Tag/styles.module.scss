@@ -1,0 +1,13 @@
+@import '../../../styles/colours.scss';
+
+.tag {
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: $coherent-grey;
+  color: $dark-grey;
+  border: 1px solid $tag-border;
+
+  &.active {
+    border: 1px solid $tag-grey;
+  }
+}

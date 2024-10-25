@@ -1,0 +1,31 @@
+@import '@/styles/mixins.scss';
+
+.pressAndNews {
+  padding: 88px 0 96px 0;
+
+  .filters {
+
+    @media (min-width: $bp-desktop) {
+      display: flex;
+      gap: 32px;
+    }
+
+    .searchInput {
+      width: 100%;
+      margin-bottom: 24px;
+
+      @media (min-width: $bp-desktop) {
+        width: 240px;
+        margin-bottom: 0;
+      }
+    }
+
+    .dropdownContainer {
+      width: 100%;
+
+      @media (min-width: $bp-desktop) {
+        width: 216px;
+      }
+    }
+  }
+}

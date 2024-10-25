@@ -1,0 +1,136 @@
+@import "@/styles/colours.scss";
+
+
+//Default theme
+.Default {
+  background-color: $coherent-light-orange;
+}
+
+.DefaultTextColour {
+  color: $coherent-orange;
+}
+
+.Default-primary {
+  background-color: $coherent-orange;
+}
+
+//latin america commons theme
+.LatinAmericaTextColour {
+  color: $latin-america-primary;
+} 
+
+.LatinAmerica { 
+  background-color: $latin-america-light;
+}
+
+.LatinAmerica-primary {
+  background-color: $latin-america-primary;
+}
+
+//oceania theme
+.OceaniaTextColour {
+  color: $oceania-primary;
+}
+
+.Oceania {
+  background-color: $oceania-light;
+}
+
+.Oceania-primary {
+  background-color: $oceania-primary;
+}
+//Applied Science theme 
+.AppliedScienceTextColour { 
+  color: $applied-science-primary;
+} 
+
+.AppliedScience { 
+  background-color: $applied-science-light;
+}   
+
+.AppliedScience-primary {
+  background-color: $applied-science-primary;
+}
+
+//Canada theme
+.CanadaTextColour {
+  color: $canada-primary;
+}
+
+.Canada {
+  background-color: $canada-light;
+}
+
+.Canada-primary {
+  background-color: $canada-primary;
+}
+
+//Africa theme
+
+.AfricaTextColour {
+  color: $africa-primary;
+}
+
+.Africa {
+  background-color: $africa-light;
+}
+
+.Africa-primary {
+  background-color: $africa-primary;
+}
+
+//History theme
+
+.HistoryTextColour {
+  color: $history-primary;
+}
+
+.History {
+  background-color: $history-light;
+}
+
+.History-primary {
+  background-color: $history-primary;
+}
+
+//Policy theme
+
+.PolicyTextColour {
+  color: $policy-primary;
+}
+
+.Policy {
+  background-color: $policy-light;
+}
+
+.Policy-primary {
+  background-color: $policy-primary;
+}
+
+//Midscape theme
+
+.MindscapeTextColour {
+  color: $mindscape-primary;
+}
+
+.Mindscape {
+  background-color: $mindscape-light;
+}
+
+.Mindscape-primary {
+  background-color: $mindscape-primary;
+}
+
+//SouthAsia theme
+.SouthAsiaTextColour {
+  color: $south-asia-primary;
+}
+
+
+.SouthAsia {
+  background-color: $south-asia-light;
+}
+
+.SouthAsia-primary {
+  background-color: $south-asia-primary;
+}

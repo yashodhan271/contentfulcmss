@@ -1,0 +1,43 @@
+@import "../../../../styles/mixins.scss";
+@import "../../../../styles/colours";
+@import "../../../../styles/breakpoints";
+
+.textImageColumnsComponent {
+  @include maxContentWidth;
+  padding: 40px 24px;
+
+  @media (min-width: $bp-tablet) {
+    padding: 40px 64px;
+  }
+
+  @media (min-width: $bp-max-header-width) {
+    padding: 56px 0;
+  }
+
+  .title {
+    @include h5;
+    max-width: 457px;
+    margin-bottom: 32px;
+
+    @media (min-width: $bp-desktop) {
+      @include h2;
+      margin-bottom: 80px;
+    }
+  }
+
+  .columnsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap :96px;
+
+    @media (min-width: $bp-tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .textImageItem {
+      max-width: 320px;
+    }
+
+  }
+}

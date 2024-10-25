@@ -1,0 +1,22 @@
+@import 'mixins';
+@import 'colours';
+@import 'breakpoints';
+@import 'font-styles';
+
+
+.swiper {
+  overflow: visible !important;
+}
+
+.swiper-wrapper {
+  transition-timing-function: ease-out !important;
+}
+
+.swiper-slide {
+  height: auto !important;
+
+  @media (min-width:$bp-max-site-width) {
+    width: fit-content !important;
+  }
+
+}

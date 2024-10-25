@@ -1,0 +1,61 @@
+@import "../../../styles/mixins";
+@import "../../../styles/colours";
+@import "../../../styles/breakpoints";
+@import "../../../styles/variables.scss";
+
+
+.pricingCard {
+  border-radius: 24px;
+  box-shadow: $drop-shadow;
+  padding: 40px 24px;
+  max-width: 368px;
+
+  @media (min-width:$bp-tablet) {
+    padding: 56px 24px 46px 24px;
+  }
+
+  .cardTitle {
+    @include h4;
+    min-height: 95px;
+
+    @media (min-width:$bp-tablet) {
+      @include h3;
+    }
+
+  }
+
+  .bodyCopy {
+    @include body;
+    margin-bottom: 24px;
+    font-weight: 300;
+
+    @media (min-width:$bp-tablet) {
+      margin-bottom: 48px;
+    }
+  }
+
+  button {
+    width: 100%;
+    align-items: center;
+  }
+
+  .benefitsTitle {
+    @include h6;
+    margin: 28px 0 24px 0;
+    font-weight: 600;
+
+  }
+
+  .richText {
+    @include listStyle;
+
+    p {
+      @include bodySmall;
+      font-weight: 300;
+      margin: 0;
+      color: $body-text-grey;
+      margin-bottom: 16px;
+    }
+  }
+
+}

@@ -1,0 +1,60 @@
+@import '../../../styles/mixins';
+@import '../../../styles/colours';
+@import '../../../styles/breakpoints';
+@import "../../../styles/variables";
+
+.cards {
+  @include blockStyling;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 45px;
+
+  @media (min-width: $bp-desktop) {
+    flex-direction: row;
+    gap: 65px;
+  }
+
+  &.animation {
+    @include animation($slideUpAnimation);
+  }
+
+  .card {
+    padding: 40px 32px 32px;
+    box-shadow: $drop-shadow;
+    border-radius: 24px;
+
+    @media (min-width:$bp-desktop) {
+      padding: 44px 56px;
+      width: 50%;
+    }
+    img {
+      border-radius: 50%;
+    }
+
+    &.cardFullwidth {
+      width: 100%;
+
+      .title {
+        max-width: 692px;
+        ;
+      }
+    }
+  }
+
+  .tagline {
+    @include bodySmall;
+    line-height: 22px;
+    margin: 16px 0 8px 0;
+    color: $body-text-grey;
+
+  }
+
+  .title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+    margin-bottom: 32px;
+  }
+}

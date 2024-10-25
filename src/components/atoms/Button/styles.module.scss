@@ -1,0 +1,61 @@
+@import '../../../styles/colours.scss';
+@import "../../../styles/mixins.scss";
+@import "../../../styles//variables.scss";
+
+.button {
+  transition: background-color .4s;
+  height: 48px;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 19.36px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+
+  &.primary-dark {
+    background-color: $dark-grey;
+    color: $white;
+
+    &:hover {
+      background-color: $coherent-black;
+    }
+  }
+
+  &.primary-light {
+    background-color: $white;
+    color: $dark-grey;
+
+    &:hover {
+      box-shadow: $drop-shadow;
+    }
+
+    &:active:hover {
+      background-color: $coherent-grey;
+      transition: none;
+    }
+  }
+
+  &.secondary {
+    background-color: transparent;
+    color: $midnight;
+    border: 1px solid $cloud;
+  }
+  &.tertiary{
+    @include bodySmall;
+    padding: 0;
+    height: fit-content;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    &:hover {
+     color: $hover-link-blue;
+    }
+    
+  }
+
+}

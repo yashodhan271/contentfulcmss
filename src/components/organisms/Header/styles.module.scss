@@ -1,0 +1,255 @@
+@import '../../../styles/breakpoints.scss';
+@import '../../../styles/colours.scss';
+@import '../../../styles/mixins.scss';
+@import '../../../styles/variables.scss';
+
+.header {
+  position: fixed;
+  background-color: transparent;
+  z-index: 2;
+  width: 100vw;
+  transition: top 0.5s;
+  top: 0;
+
+  @media (min-width: $bp-desktop) {
+    &.scrollAway {
+      top: -160px;
+    }
+
+    &.scrollOff {
+      top: 0;
+    }
+  }
+
+  .scrollingHeader {
+    background-color: $white !important;
+    box-shadow: $drop-shadow;
+  }
+
+  .searchActive {
+    background-color: $white;
+    height: 376px !important;
+    box-shadow: $drop-shadow;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .searchIcon {
+    cursor: pointer
+  }
+
+
+
+  .desktop {
+    display: none;
+    position: relative;
+    z-index: 2;
+
+    .search {
+      @include maxContentWidth;
+      transition: opacity 0.5s;
+      transition-delay: 0.3s;
+      visibility: hidden;
+      opacity: 0;
+
+      &.active {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    @media (min-width: $bp-min-header-width) {
+      display: block;
+    }
+
+    height: 160px;
+    justify-content: center;
+
+    transition: box-shadow 0.3s,
+    height 0.5s;
+
+    .desktopWrapper {
+      max-width: $bp-max-header-width;
+      margin: 0 auto 90px auto;
+
+      @media (max-width: $bp-max-header-width) {
+        padding: 0 24px;
+      }
+
+      .links {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-top: 16px;
+
+        a {
+          &:hover {
+            color: $hover-link-blue;
+          }
+        }
+
+        &>div,
+        >a {
+          margin: 0 12px;
+          font-weight: 600;
+        }
+
+        div {
+          &:last-of-type {
+            margin: 0;
+          }
+        }
+
+        a {
+          font-size: 12px;
+          font-size: 1.2rem;
+          line-height: 14px;
+        }
+      }
+
+      .nav {
+        padding-top: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .navAndButton {
+          display: flex;
+          align-items: center;
+
+          .search {
+            margin: 0 20px;
+          }
+
+          button {
+            margin-left: 36px;
+          }
+        }
+      }
+    }
+  }
+
+  .mobile {
+    @media (min-width: $bp-min-header-width) {
+      display: none;
+    }
+
+    height: 72px;
+    display: flex;
+
+    .searchHeader {
+      height: 0;
+      overflow: hidden;
+      transition: height 0.5s;
+      display: flex;
+      justify-content: center;
+
+      &.active {
+        height: 20px;
+      }
+    }
+
+    .mobileHeaderActivated {
+      z-index: 99999;
+      background-color: white;
+
+      .headerLogo {
+        display: none;
+      }
+
+      .searchAndNav {
+        width: 100%;
+        justify-content: flex-end;
+        padding: 0 8px;
+      }
+    }
+
+    .mobileHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      width: 100%;
+      background-color: transparent;
+
+      .headerLogo {
+        z-index: 99999;
+        height: 29px;
+      }
+
+      .searchAndNav {
+        display: flex;
+        align-items: center;
+
+        .hamburgerMenuContainer {
+          cursor: pointer;
+          display: flex;
+          width: 40px;
+          height: 40px;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          margin-left: 16px;
+          transition: background-color 0.4s;
+        }
+
+        .closeBtn {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .mobileNav {
+      padding: 32px 0;
+      width: 100vw;
+      height: 100svh;
+      background-color: white;
+      position: absolute;
+      top: 0;
+      display: none;
+      z-index: 1;
+
+      &.active {
+        display: block;
+        overflow: auto;
+      }
+    }
+
+    .mobileSearch {
+      display: none;
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: $white;
+      padding: 32px 24px;
+      z-index: 99999;
+
+      &.active {
+        display: block;
+      }
+
+      .headerAndClose {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .input {
+        margin-top: 72px;
+      }
+
+    }
+  }
+}
+
+.hidden {
+  display: none !important;
+}

@@ -1,0 +1,70 @@
+@import "@/styles/mixins.scss";
+@import "@/styles/colours.scss";
+
+
+.label {
+  @include bodySmall;
+  color: $tag-grey;
+  margin-bottom: 16px;
+}
+
+.inputWrapper {
+  @include input;
+  display: inline-block;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+
+  &.small {
+    height: 48px;
+
+    .searchIcon {
+      width: 16px;
+      height: 16px;
+    }
+
+    .searchInput {
+      &::-webkit-search-cancel-button {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+  }
+
+  @media (min-width: $bp-desktop) {
+    max-width: 528px;
+  }
+
+  .searchIcon {
+    margin-right: 10px;
+  }
+
+  .searchInput {
+    @include body;
+    line-height: 32px;
+    border: none;
+    width: 100%;
+    cursor: inherit;
+
+    &::placeholder {
+      color: $body-text-grey;
+    }
+
+    &::-webkit-search-cancel-button {
+      background: $form-field-borders;
+      appearance: none;
+      right: 0;
+      position: relative;
+      background-size: contain;
+      width: 32px;
+      height: 32px;
+      text-align: center;
+      border-radius: 50%;
+      cursor: pointer;
+      background-image: url('../../../../public/icons/exit.svg');
+      background-repeat: no-repeat;
+    }
+  }
+}

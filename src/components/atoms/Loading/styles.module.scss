@@ -1,0 +1,42 @@
+@import "@/styles/colours.scss";
+@import "@/styles/breakpoints.scss";
+
+.loadingContainer {
+  text-align: center;
+  padding: 40px 0 160px 0;
+
+  @media (min-width: $bp-tablet) {
+    padding: 64px 0 320px 0;
+  }
+}
+
+.circlesvg {
+  --radius: 50;
+
+  background: #fff;
+  --PI: 3.14159265358979;
+  --circumference: calc(var(--PI) * var(--radius) * 2px);
+}
+
+.circlesvg circle {
+  stroke: $coherent-orange;
+  stroke-width: 4;
+  fill: transparent;
+  transform-origin: center;
+  stroke-dasharray: var(--circumference);
+  animation: spinner 3s ease-out infinite;
+}
+
+@keyframes spinner {
+  from {
+    stroke-dashoffset: var(--circumference);
+    stroke: $coherent-orange;
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    stroke-dashoffset: calc(var(--circumference) * -1);
+    stroke: $coherent-orange;
+    transform: rotateZ(720deg);
+  }
+}

@@ -1,0 +1,205 @@
+@import '../../../styles/mixins';
+@import '../../../styles/colours';
+@import '../../../styles/breakpoints';
+@import '../../../styles/variables';
+
+.filters {
+  padding: 40px 0 40px 24px;
+  @include maxContentWidth;
+  max-width: $bp-max-header-width;
+
+  @media (min-width: $bp-tablet) {
+    padding: 152px 24px;
+  }
+
+  @media (min-width:$bp-max-header-width) {
+    padding: 152px 0;
+  }
+
+  .heading {
+    @include maxContentWidth;
+    margin: 0 0 72px 0;
+
+    @media (min-width: $bp-tablet) {
+      margin: 0 0 40px 0;
+    }
+  }
+
+  .desktopFilter {
+    display: none;
+
+    @media (min-width: $bp-tablet) {
+      display: block;
+    }
+
+    .filtersContainer {
+      display: flex;
+      gap: 32px;
+
+      .filterContainer {
+        width: 264px;
+        box-shadow: $drop-shadow;
+        background-color: $white;
+        border-radius: 24px;
+        padding: 32px 24px;
+      }
+
+      .filterSection {
+        padding-bottom: 24px;
+
+        .heading {
+          font-weight: 600;
+          margin-bottom: 24px;
+        }
+
+        &:not(:last-of-type) {
+          border-bottom: 1px solid $accordion-border;
+        }
+      }
+    }
+  }
+
+
+  .mobileFilter {
+    @media (min-width: $bp-tablet) {
+      display: none;
+    }
+
+    &.filterCtaFixed {
+      padding-top: 48px; // 48 height of the button
+    }
+
+    .appliedFilters {
+      padding: 32px 0 24px 0;
+      flex-wrap: nowrap;
+      overflow: auto;
+    }
+
+
+    .mobileFilterButton {
+      &.fixedButton {
+        position: fixed;
+        top: 96px;
+        z-index: 3;
+      }
+    }
+  }
+
+  .filterMenu {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+
+      .filterMenuOverlay {
+        opacity: 1;
+      }
+
+      .filterMenuSideMenu {
+        transform: translateX(0);
+      }
+    }
+
+
+    .filterMenuOverlay {
+      backdrop-filter: blur(4px);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      opacity: 0;
+    }
+
+    .filterMenuHeader {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .filterMenuSideMenu {
+      position: absolute;
+      width: 320px;
+      height: 100svh;
+      background-color: $white;
+      box-shadow: $drop-shadow;
+      padding: 40px 24px;
+      transform: translateX(-100%);
+      z-index: 1;
+    }
+
+    .filterList {
+      overflow: scroll;
+      height: calc(100svh - 180px);
+    }
+
+    .filterFooter {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: $white;
+      padding: 24px;
+      margin-left: -24px;
+      box-shadow: $drop-shadow;
+
+      .clearFilters {
+        margin-bottom: 16px;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  .appliedFilters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    .appliedFilter {
+      display: inline-flex;
+      align-items: center;
+      background-color: $coherent-grey;
+      color: $dark-grey;
+      justify-content: space-between;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid #E6E6E6;
+      cursor: pointer;
+
+      p {
+        font-size: 15px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 24px;
+        color: $dark-grey;
+        white-space: nowrap;
+      }
+
+      .close {
+        background-image: url('../../../../public/icons/applied-filter-close.svg');
+        width: 9px;
+        height: 9px;
+        background-size: contain;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .clearFilters {
+    display: inline-flex;
+    font-size: 14px;
+    font-size: 1.4rem;
+    padding-bottom: 2px;
+    border-bottom: 1px solid $midnight;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}

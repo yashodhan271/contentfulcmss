@@ -1,0 +1,10 @@
+@import "../../../styles/breakpoints";
+
+.testimonialMark {
+  width: 24px;
+  height: 18px;
+  @media (min-width: $bp-max-content-width) {
+    width: 68px;
+    height: 53px;
+  }
+}

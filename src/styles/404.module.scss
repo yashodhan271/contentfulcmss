@@ -1,0 +1,9 @@
+@import '@/styles/mixins';
+
+.notFound {
+  @include blockStyling;
+
+  h2 {
+    margin-bottom: 24px;
+  }
+}

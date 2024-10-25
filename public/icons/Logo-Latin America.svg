@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="192"
+   height="190"
+   viewBox="0 0 192 190"
+   fill="none"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="Logo-Africa.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1">
+      <rect
+         style="opacity:0.640732;fill:#0ebe82;stroke-width:1.20219"
+         id="rect2"
+         width="230.82077"
+         height="228.97693"
+         x="-0.17146507"
+         y="-0.1714651" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.2894737"
+     inkscape:cx="122.97546"
+     inkscape:cy="79.846626"
+     inkscape:window-width="1920"
+     inkscape:window-height="964"
+     inkscape:window-x="1"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1" />
+  <g
+     id="All"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd"
+     transform="matrix(0.8318142,0,0,0.8318142,-0.09050175,-0.09050173)"
+     clip-path="url(#clipPath1)">
+    <g
+       id="Artboard"
+       transform="translate(-2130,-3845)">
+      <g
+         id="LACO"
+         transform="translate(2130.1088,3845.1088)">
+        <circle
+           id="LACO-White-Background"
+           fill="#ffffff"
+           cx="140"
+           cy="140"
+           r="137" />
+        <path
+           d="M 47.967269,233.09858 C 140.98428,318.90224 255.74783,233.3312 200.19145,214.49316 151.05769,197.8329 128.53839,222.27004 83.176031,173.79052 0.53495902,85.470601 -8.478618,181.02999 47.967269,233.09858 Z M 250.79883,225.55785 C 298.0563,164.36301 286.76006,76.44695 225.56448,29.194602 164.36891,-18.057746 76.458634,-6.7548055 29.201167,54.440037 -18.0563,115.63716 -6.7600577,203.55321 54.435516,250.80556 115.63109,298.05791 203.56414,286.75497 250.79883,225.55785 Z"
+           id="LACO-Symbol"
+           fill="#0ebe82"
+           transform="rotate(180,140,140)" />
+      </g>
+    </g>
+  </g>
+</svg>

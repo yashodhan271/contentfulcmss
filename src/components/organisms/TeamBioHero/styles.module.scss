@@ -1,0 +1,113 @@
+@import '../../../styles/mixins';
+@import '../../../styles/colours.scss';
+@import '../../../styles/breakpoints.scss';
+
+
+
+.teamBioHero {
+  background-color: $coherent-light-orange;
+  padding: 40px 0;
+
+  @media (min-width:$bp-max-content-width) {
+    padding: 160px 0 0;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: $bp-max-content-width;
+    margin: 72px auto 0 auto;
+    padding: 0 24px;
+    position: relative;
+
+    @media (min-width:$bp-tablet) {
+      padding: 0 64px 84px 64px;
+      justify-content: space-between;
+      flex-direction: row;
+      gap: 50px;
+      max-width: $bp-max-content-width;
+    }
+
+    @media (min-width:$bp-max-content-width) {
+      padding: 0 0 84px 0;
+
+    }
+  }
+
+  .jobTitle {
+    @include bodySmall;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+
+  .name {
+    @include h4;
+    font-weight: 500;
+    margin-bottom: 40px;
+
+    @media (min-width:$bp-desktop) {
+      @include h1;
+    }
+  }
+
+  button {
+    width: 100%;
+    align-items: center;
+    max-width: 252px;
+  }
+
+  .email {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    p {
+      text-decoration: underline;
+      @include bodySmall;
+    }
+  }
+
+  .phoneNumber {
+    display: flex;
+    gap: 14px;
+    margin-top: 32px;
+
+    p {
+      @include bodySmall;
+    }
+  }
+
+  .imageWrapper {
+    margin: 39px 43px 0 0;
+
+    @media (min-width:$bp-tablet) {
+      margin: 0;
+    }
+  }
+
+
+  .image {
+    border-radius: 16px;
+    width: 100%;
+    height: auto;
+    max-width: 457px;
+
+    @media (min-width:$bp-desktop) {
+      min-width: 457px;
+    }
+  }
+
+  .backBtn {
+    margin-top: 40px;
+    cursor: pointer;
+
+    @media (min-width:$bp-tablet) {
+      position: absolute;
+      bottom: 0;
+    }
+
+    @media (min-width:$bp-desktop) {
+      bottom: 100px;
+    }
+  }
+}

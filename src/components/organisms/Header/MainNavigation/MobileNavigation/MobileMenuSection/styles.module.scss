@@ -1,0 +1,55 @@
+@import "@/styles/mixins.scss";
+
+.menuItem {
+
+  .subMenu {
+    a {
+      &:first-of-type {
+        display: block;
+        padding-top: 16px;
+      }
+    }
+  }
+
+  .subMenuName {
+    @include body;
+    color: $text;
+    padding: 28px 0 8px 0;
+  }
+
+  .link {
+    padding: 8px 0;
+
+  }
+
+  button {
+    width: 100%;
+
+    &[aria-expanded="true"] {
+      .accordionHeader {
+        .chevron {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .accordionHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      .chevron {
+        transition: transform 0.5s;
+      }
+    }
+  }
+
+  &.noSubItems {
+    @include h5;
+    padding: 28px 24px 0 24px;
+    color: $midnight;
+  }
+
+
+}
