@@ -16,7 +16,7 @@ export function LivePreviewProvider({
       enableInspectorMode={true}
       enableLiveUpdates={true}
       debugMode // This allows you to toggle the debug mode which is off by default
-      targetOrigin="https://app.contentful.com" 
+      
     >
       {children}
     </ContentfulLivePreviewProvider>
